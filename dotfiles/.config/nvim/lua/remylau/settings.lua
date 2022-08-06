@@ -18,9 +18,10 @@ o.relativenumber = true     -- show relative line number to the current line
 o.number = true             -- show current line number instead of 0
 o.cursorline = true         -- underline the current cursor line
 o.hidden = true             -- something about buffer, need to explore more
+o.wrap = false              -- do not wrap line
 o.scrolloff = 8             -- start scrolling when 8 lines away from bottom (or top)
-vim.cmd('set colorcolumn=80')
-vim.cmd('set noerrorbells')
+o.colorcolumn = '80'
+o.errorbells = false
 
 -- Matching and searching
 o.ignorecase = true         -- case insensitive search

@@ -25,6 +25,9 @@ return require("packer").startup({
             requires = { 'kyazdani42/nvim-web-devicons' }
         }
 
+        -- Color scheme
+        use 'folke/tokyonight.nvim'
+
         -- Editing
         use 'Vimjas/vim-python-pep8-indent'
         use 'jiangmiao/auto-pairs'

@@ -1,0 +1,10 @@
+ssl_verify: true
+channels:
+  - defaults
+  - conda-forge
+create_default_packages:
+  - pip
+  - tox
+  - python-lsp-server
+  - ripgrep
+  - pre-commit

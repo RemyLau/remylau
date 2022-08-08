@@ -22,7 +22,7 @@ return require("packer").startup({
         use 'scrooloose/nerdtree'
         use {
             'tiagofumo/vim-nerdtree-syntax-highlight',
-            requires = { 'kyazdani42/nvim-web-devicons' }
+            requires = { 'ryanoasis/vim-devicons' }
         }
 
         -- Color scheme

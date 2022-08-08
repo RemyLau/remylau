@@ -1,0 +1,48 @@
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/renmingliu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/renmingliu/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/renmingliu/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/renmingliu/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# add color
+export CLICOLOR=1
+
+# remap brew
+alias brew='arch -x86_64 brew'
+
+# ls shortcuts
+alias ll='ls -lath'
+
+# remove with warning
+alias rm='rm -i'
+
+# profiling temperatures
+alias tempwatch='sudo powermetrics --samplers smc | grep -i "CPU die temperature"'
+
+# load zcalc
+autoload -Uz zcalc
+
+# auto/tab completion
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+
+# ssh shortcut
+alias dev20='ssh liurenmi@hpcc.msu.edu -t "ssh dev-amd20"'
+alias dev20v='ssh liurenmi@hpcc.msu.edu -t "ssh dev-amd20-v100"'
+alias dev20l='ssh -L 45684:localhost:45684 liurenmi@hpcc.msu.edu -t "ssh -L 45684:localhost:45684 dev-amd20"'
+alias rsub='ssh -R 52698:localhost:52698 liurenmi@hpcc.msu.edu'
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters

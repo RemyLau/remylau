@@ -32,6 +32,17 @@ return require("packer").startup({
         use 'Vimjas/vim-python-pep8-indent'
         use 'jiangmiao/auto-pairs'
 
+        -- Tree sitter
+        use {
+            'nvim-treesitter/nvim-treesitter',
+            run = ':TSUpdate'
+            -- Run the line below instead of the above for first time installation
+            -- run = function() require('nvim-treesitter.install').update({ with_sync = true }) end
+        }
+        use 'p00f/nvim-ts-rainbow'
+        use 'nvim-treesitter/playground'
+        use 'nvim-treesitter/nvim-treesitter-context'
+
         -- LSP
         use 'neovim/nvim-lspconfig'
 

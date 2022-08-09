@@ -1,3 +1,19 @@
+-- Automatically install Packer if it is not installed yet
+local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    print(string.format("Cloning packer to %s", install_path))
+    PACKER_BOOTSTRAP = vim.fn.system {
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+    }
+    print("Installation done, close and reopen Neovim.")
+    vim.cmd("packadd packer.nvim")
+end
+
 -- Automatically run :PackerCompile whenever plugins.lua is updated
 vim.api.nvim_create_autocmd('BufWritePost', {
     group = vim.api.nvim_create_augroup('PACKER', { clear = true }),

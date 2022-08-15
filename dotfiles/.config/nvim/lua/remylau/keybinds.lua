@@ -22,10 +22,11 @@ map('n', '<Leader><CR>', ':source ~/.config/nvim/init.lua<CR>')
 -- Buffer and tabs
 map('n', '<C-j>', ':bnext<CR>')             -- next buffer
 map('n', '<C-k>', ':bprevious<CR>')         -- previous buffer
-map('n', '<C-x>', ':bp|bd#<CR>')            -- delete buffer without closing panel
+-- map('n', '<C-x>', ':bp|bd#<CR>')            -- delete buffer without closing panel
 map('n', '<C-l>', ':tabnext<CR>')           -- next tab
 map('n', '<C-h>', ':tabprevious<CR>')       -- previous tab
 map('n', '<C-t>', ':tabnew<CR>')            -- new tab
+map('n', '<C-x>', ':tabclose<CR>')          -- close current tab
 map('n', '<Leader>l', ':e#<CR>')            -- go back to last (alternative) file
 map('n', '<Leader>1', ':1b<CR>')            -- go to the first buffer
 map('n', '<Leader>1', ':2b<CR>')

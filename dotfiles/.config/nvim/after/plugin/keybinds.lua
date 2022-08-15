@@ -14,6 +14,7 @@ map('n', '<Leader>ff', ':Telescope find_files<CR>')
 map('n', '<Leader>fg', ':Telescope live_grep<CR>')
 map('n', '<Leader>fb', ':Telescope buffers<CR>')
 map('n', '<Leader>fh', ':Telescope help_tags<CR>')
+map('n', '<Leader>fd', ':TodoTelescope<CR>') -- folke/todo-comments.nvim
 
 -- Harpoon
 map('n', '<Leader>ha', ':lua require("harpoon.mark").add_file()<CR>')

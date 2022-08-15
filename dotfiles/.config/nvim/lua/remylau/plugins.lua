@@ -43,6 +43,7 @@ return require("packer").startup({
 
         -- Color scheme
         use 'folke/tokyonight.nvim'
+        use 'folke/todo-comments.nvim'
 
         -- Editing
         use 'Vimjas/vim-python-pep8-indent'

@@ -28,15 +28,15 @@ map('n', '<C-h>', ':tabprevious<CR>')       -- previous tab
 map('n', '<C-t>', ':tabnew<CR>')            -- new tab
 map('n', '<C-x>', ':tabclose<CR>')          -- close current tab
 map('n', '<Leader>l', ':e#<CR>')            -- go back to last (alternative) file
-map('n', '<Leader>1', ':1b<CR>')            -- go to the first buffer
-map('n', '<Leader>1', ':2b<CR>')
-map('n', '<Leader>1', ':3b<CR>')
-map('n', '<Leader>1', ':4b<CR>')
-map('n', '<Leader>1', ':5b<CR>')
-map('n', '<Leader>1', ':6b<CR>')
-map('n', '<Leader>1', ':7b<CR>')
-map('n', '<Leader>1', ':8b<CR>')
-map('n', '<Leader>1', ':9b<CR>')
+map('n', '<Leader>1', '1gt')                -- go to the first tab
+map('n', '<Leader>2', '2gt')
+map('n', '<Leader>3', '3gt')
+map('n', '<Leader>4', '4gt')
+map('n', '<Leader>5', '5gt')
+map('n', '<Leader>6', '6gt')
+map('n', '<Leader>7', '7gt')
+map('n', '<Leader>8', '8gt')
+map('n', '<Leader>9', '9gt')
 
 -- Quick fix list
 map('n', '<C-n>', ':cnext<CR>')             -- move to the next item

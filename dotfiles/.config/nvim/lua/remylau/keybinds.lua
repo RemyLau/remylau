@@ -5,7 +5,7 @@ end
 -- Movements
 map('n', 'n', 'nzzzv')                      -- move to next matched keeping view centered
 map('n', 'N', 'Nzzzv')
-map('n', '}', '}zzzv')
+map('n', '{', '{zzzv')
 map('n', '}', '}zzzv')
 map('n', ')', ')zzzv')
 map('n', '(', '(zzzv')

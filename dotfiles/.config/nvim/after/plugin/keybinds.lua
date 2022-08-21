@@ -23,3 +23,15 @@ map('n', '<Leader><C-j>', ':lua require("harpoon.ui").nav_file(1)<CR>')
 map('n', '<Leader><C-k>', ':lua require("harpoon.ui").nav_file(2)<CR>')
 map('n', '<Leader><C-l>', ':lua require("harpoon.ui").nav_file(3)<CR>')
 map('n', '<Leader><C-;>', ':lua require("harpoon.ui").nav_file(4)<CR>')
+
+-- Sessions
+map('n', '<Leader>ss', [[
+:SessionsSave .local_nvim_session<CR>
+:SessionsStop<CR>
+:lua print "session saved to .local_nvim_session"<CR>
+]]) -- save but not autosave
+map('n', '<Leader>sl', [[
+:SessionsLoad .local_nvim_session<CR>
+:SessionsStop<CR>
+:lua print "session loaded from .local_nvim_session"<CR>
+]]) -- load and disable autosave

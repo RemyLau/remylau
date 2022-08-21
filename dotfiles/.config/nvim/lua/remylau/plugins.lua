@@ -71,5 +71,11 @@ return require("packer").startup({
 
         -- Harpoon
         use 'ThePrimeagen/harpoon'
+
+        -- Session
+        use {
+            'natecraddock/sessions.nvim',
+            config = function() require 'sessions'.setup() end
+        }
     end
 })

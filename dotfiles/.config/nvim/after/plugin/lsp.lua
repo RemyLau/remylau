@@ -19,5 +19,5 @@ end
 
 require('lspconfig').pylsp.setup{
     on_attach = on_attach,
-    autostart=true,
+    autostart = true,
 }

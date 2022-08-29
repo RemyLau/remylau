@@ -2,6 +2,10 @@ local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = true  })
 end
 
+-- Lsp
+map('n', '<Leader>n', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+map('n', '<Leader>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+
 -- Undo tree
 map('n', '<Leader>ud', ':UndotreeToggle<CR>')
 

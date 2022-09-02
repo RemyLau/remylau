@@ -39,6 +39,6 @@ map('n', '<Leader>8', '8gt')
 map('n', '<Leader>9', '9gt')
 
 -- Quick fix list
-map('n', '<C-n>', ':cnext<CR>')             -- move to the next item
-map('n', '<C-a>', ':cprevious<CR>')         -- move to the previous item
+map('n', '<C-n>', ':cnext<CR>zzzv')         -- move to the next item
+map('n', '<C-a>', ':cprevious<CR>zzzv')     -- move to the previous item
 map('n', '<C-q>', ':cclose<CR>')            -- close quick fix list

@@ -1,5 +1,8 @@
-vim.g.tokyonight_style = 'night'
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_transparent_sidebar = true
+require "tokyonight".setup {
+    style = "night",
+    transparent = true,
+    transparent_sidebar = true,
+    dim_inactive = true,
+}
 
-vim.cmd('colorscheme tokyonight')
+vim.cmd[[colorscheme tokyonight]]

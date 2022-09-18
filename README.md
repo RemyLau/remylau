@@ -36,7 +36,7 @@ My broad research interests include network biology, graph representation learni
 - Email: liurenmi@msu.edu
 
 ### ⚡ Side projects
-- ✍️ I share my passionate about network biology and machine learning via blog posts on [Medium](https://remylau961.medium.com/)
+- ✍️ I share my passion about network biology and machine learning via blog posts on [Medium](https://remylau961.medium.com/)
 - 👀 I create mathematical and algorithmic [visualizations](https://github.com/RemyLau/visualizations) using [Manim](https://github.com/ManimCommunity/manim), which was first developed and used by my favorite math YouTube channel [3Blue1Brown](https://www.3blue1brown.com/).
 - 🤗 I contribute to open source projects in various ways
   - Implemented patches and fixes: [Pytorch Geometric](https://github.com/pyg-team/pytorch_geometric)

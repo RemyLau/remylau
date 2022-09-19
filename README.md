@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-I'm a Ph.D. candidate in the Dept. of CMSE at Michigan State University.
+I'm a Ph.D. candidate in the Dept. of Computational Mathematics, Science & Engineering (CMSE) at Michigan State University.
 My broad research interests include network biology, graph representation learning, spectral graph theory, and machine learning.
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=remylau&theme=tokyonight&show_icons=true)

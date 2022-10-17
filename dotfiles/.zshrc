@@ -145,6 +145,7 @@ alias dev20l='ssh -L 45684:localhost:45684 liurenmi@hpcc.msu.edu -t "ssh -L 4568
 alias rsub='ssh -R 52698:localhost:52698 liurenmi@hpcc.msu.edu'
 alias gr='ssh liurenmi@scully.egr.msu.edu -t "ssh liurenmi@grandriver.egr.msu.edu -t bash"'
 alias grl='ssh -L 45684:localhost:45684 liurenmi@scully.egr.msu.edu -t "ssh -L 45684:localhost:45684 liurenmi@grandriver.egr.msu.edu -t bash"'
+alias awsec='ssh -i .dse_aws_remy.pem remy@ec2-3-238-218-110.compute-1.amazonaws.com'
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

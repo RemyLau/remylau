@@ -19,6 +19,10 @@ map('n', '<Leader>fg', ':Telescope live_grep<CR>')
 map('n', '<Leader>fb', ':Telescope buffers<CR>')
 map('n', '<Leader>fh', ':Telescope help_tags<CR>')
 map('n', '<Leader>fd', ':TodoTelescope<CR>') -- folke/todo-comments.nvim
+map('n', '<Leader>gg', ':Telescope git_files')
+map('n', '<Leader>ps', function()
+    require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
+end)
 
 -- Harpoon
 map('n', '<Leader>ha', ':lua require("harpoon.mark").add_file()<CR>')

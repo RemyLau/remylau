@@ -42,12 +42,11 @@ return require("packer").startup({
         }
 
         -- Color scheme
-        use {
-            'rose-pine/neovim',
-            as = 'rose-pine'
-        }
         use 'folke/tokyonight.nvim'
         use 'folke/todo-comments.nvim'
+        use { 'pineapplegiant/spaceduck', branch = 'main' }
+        use 'rebelot/kanagawa.nvim'
+        use { 'rose-pine/neovim', as = 'rose-pine' }
 
         -- Editing
         use 'Vimjas/vim-python-pep8-indent'

@@ -3,8 +3,8 @@ local function map(m, k, v)
 end
 
 -- Lsp
-map('n', '<Leader>n', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-map('n', '<Leader>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+map('n', '<Leader>n', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+map('n', '<Leader>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 
 -- Undo tree
 map('n', '<Leader>ud', ':UndotreeToggle<CR>')

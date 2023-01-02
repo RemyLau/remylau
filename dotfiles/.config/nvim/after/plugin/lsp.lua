@@ -1,4 +1,4 @@
-opts = { noremap=true, silent=true }
+local opts = { noremap=true, silent=true }
 
 -- Use an on_attach function to only map to the following keys
 -- after the language server attaches to the current buffer

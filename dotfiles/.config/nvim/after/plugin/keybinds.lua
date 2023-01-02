@@ -2,6 +2,9 @@ local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = true  })
 end
 
+-- Mason
+map('n', '<C-m>', ':Mason<CR>')
+
 -- Lsp
 map('n', '<Leader>n', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 map('n', '<Leader>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>')

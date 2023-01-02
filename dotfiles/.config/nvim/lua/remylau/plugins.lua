@@ -23,8 +23,9 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 
 return require("packer").startup({
     function(use)
-        -- Packer Manager
+        -- Package Manager
         use 'wbthomason/packer.nvim'
+        use 'williamboman/mason.nvim'
 
         -- Required plugins
         use 'nvim-lua/plenary.nvim'
@@ -70,6 +71,7 @@ return require("packer").startup({
 
         -- LSP
         use 'neovim/nvim-lspconfig'
+        use 'williamboman/mason-lspconfig.nvim'
 
         -- Undo tree
         use 'mbbill/undotree'

@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     command = 'source <afile> | PackerCompile',
 })
 
-return require("packer").startup({
+return require("packer").startup {
     function(use)
         -- Package Manager
         use 'wbthomason/packer.nvim'
@@ -73,19 +73,13 @@ return require("packer").startup({
         use 'neovim/nvim-lspconfig'
         use 'williamboman/mason-lspconfig.nvim'
 
-        -- Undo tree
-        use 'mbbill/undotree'
-
-        -- Telescope
+        -- Powertools
         use 'nvim-telescope/telescope.nvim'
-
-        -- Harpoon
         use 'ThePrimeagen/harpoon'
-
-        -- Session
+        use 'mbbill/undotree'
         use {
             'natecraddock/sessions.nvim',
             config = function() require 'sessions'.setup() end
         }
     end
-})
+}

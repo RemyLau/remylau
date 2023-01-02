@@ -81,5 +81,6 @@ return require("packer").startup {
             'natecraddock/sessions.nvim',
             config = function() require 'sessions'.setup() end
         }
+        use 'folke/trouble.nvim'
     end
 }

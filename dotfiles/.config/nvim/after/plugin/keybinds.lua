@@ -46,3 +46,6 @@ map('n', '<Leader>sl', [[
 :SessionsStop<CR>
 :lua print "session loaded from .local_nvim_session"<CR>
 ]]) -- load and disable autosave
+
+-- Trouble
+map('n', '<Leader>xx', ':TroubleToggle<CR>')

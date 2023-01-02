@@ -1,5 +1,5 @@
 require('tokyonight').setup({
-    style = 'night',
+    style = 'moon',
     transparent = true,
     transparent_sidebar = true,
     dim_inactive = true,
@@ -22,7 +22,7 @@ require('kanagawa').setup({
     keywordStyle = { },
     statementStyle = { bold = true },
     typeStyle = {},
-    variablebuiltinStyle = { italic = true},
+    variablebuiltinStyle = { italic = true },
     specialReturn = true,       -- special highlight for the return keyword
     specialException = true,    -- special highlight for exception handling keywords
     transparent = true,         -- do not set background color
@@ -32,4 +32,4 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-vim.cmd('colorscheme kanagawa')
+vim.cmd('colorscheme tokyonight')

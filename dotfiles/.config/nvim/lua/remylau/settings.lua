@@ -37,6 +37,11 @@ o.swapfile = false
 -- o.backupdir = '/tmp/'
 -- o.directory = '/tmp/'
 -- o.undodir = '/tmp/'
+g.undotree_WindowLayout = 2
+g.undotree_SplitWidth = 30
+g.undotree_DiffpanelHeight = 15
+g.undotree_HighlightChangedText = 1
+g.undotree_HighlightChangedWithSign = 1
 
 -- Map <leader>
 g.mapleader = ' '

@@ -25,7 +25,6 @@ return require("packer").startup {
     function(use)
         -- Package Manager
         use 'wbthomason/packer.nvim'
-        use 'williamboman/mason.nvim'
 
         -- Required plugins
         use 'nvim-lua/plenary.nvim'
@@ -71,7 +70,10 @@ return require("packer").startup {
 
         -- LSP
         use 'neovim/nvim-lspconfig'
+        use 'williamboman/mason.nvim'
         use 'williamboman/mason-lspconfig.nvim'
+        use 'jose-elias-alvarez/null-ls.nvim'           -- use nvim as lsp to inject diagnostics, etc.
+        use 'jayp0521/mason-null-ls.nvim'
 
         -- Powertools
         use 'nvim-telescope/telescope.nvim'

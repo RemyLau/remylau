@@ -28,7 +28,6 @@ map('n', '<C-l>', ':tabnext<CR>')           -- next tab
 map('n', '<C-h>', ':tabprevious<CR>')       -- previous tab
 map('n', '<C-t>', ':tabnew<CR>')            -- new tab
 map('n', '<C-x>', ':tabclose<CR>')          -- close current tab
-map('n', '<Leader>l', ':e#<CR>')            -- go back to last (alternative) file
 map('n', '<Leader>1', '1gt')                -- go to the first tab
 map('n', '<Leader>2', '2gt')
 map('n', '<Leader>3', '3gt')

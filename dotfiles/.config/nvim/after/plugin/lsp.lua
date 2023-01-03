@@ -54,9 +54,46 @@ require("mason-lspconfig").setup_handlers {
         }
     end,
 
-    -- -- Next, you can provide a dedicated handler for specific servers.
-    -- -- For example, a handler override for the `rust_analyzer`:
-    -- ["rust_analyzer"] = function ()
-    --     require("rust-tools").setup {}
-    -- end
+    -- Next, you can provide a dedicated handler for specific servers.
+    ["pylsp"] = function()
+        require("lspconfig").pylsp.setup {
+            cmd = {"pylsp"},
+            filetypes = {"python"},
+            settings = {
+                pylsp = {
+                    configurationSources = {"pycodestyle"},
+                    plugins = {
+                        autopep8 = { enabled = true },
+                        flake8 = { enabled = false },
+                        jedi_completion = { enabled = true },
+                        jedi_definition = { enabled = true },
+                        jedi_hover = { enabled = true },
+                        jedi_references = { enabled = true },
+                        jedi_signature_help = { enabled = true },
+                        jedi_symbols = { enabled = true },
+                        mccabe = { enabled = true },  -- cyclic complexity chekcs
+                        pycodestyle = { enabled = true },
+                        pyflakes = { enabled = false },
+                        mypy = { enabled = false },
+                        isort = { enabled = false },
+                        yapf = { enabled = false },
+                        preload = { enabled = false },
+                        rope_completion = { enabled = false },
+                    }
+                }
+            },
+            on_attach = on_attach,
+        }
+    end,
+   ["sumneko_lua"] = function ()
+       require("lspconfig").sumneko_lua.setup {
+           settings = {
+               Lua = {
+                   diagnostics = {
+                       globals = { "vim" }
+                   }
+               }
+           }
+       }
+   end
 }

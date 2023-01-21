@@ -56,6 +56,7 @@ umask g+rw
 
 module use /mnt/research/compbio/krishnanlab/modules/
 module load git
+module load nodejs
 
 # CUDA 11.1.1
 #module swap GNU GCC/10.2.0

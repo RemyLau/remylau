@@ -56,6 +56,7 @@ return require("packer").startup {
         -- Editing
         use 'Vimjas/vim-python-pep8-indent'
         use 'jiangmiao/auto-pairs'
+        use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
         -- Tree sitter
         use {

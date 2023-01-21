@@ -49,3 +49,6 @@ map('n', '<Leader>sl', [[
 
 -- Trouble
 map('n', '<Leader>xx', ':TroubleToggle<CR>')
+
+-- Diffview
+map('n', '<Leader>do', '<cmd>DiffviewOpen<CR>')

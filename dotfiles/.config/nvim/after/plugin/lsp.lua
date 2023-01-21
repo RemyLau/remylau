@@ -27,10 +27,10 @@ require("mason-lspconfig").setup {
     -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "sumneko_lua" }
     -- This setting has no relation with the `automatic_installation` setting.
     ensure_installed = {
-        "bashls",
+        -- "bashls",
         "pylsp",
-        "sumneko_lua",
-        "yamlls",
+        -- "sumneko_lua",
+        -- "yamlls",
     },
 
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
@@ -73,11 +73,11 @@ require("mason-lspconfig").setup_handlers {
                         jedi_symbols = { enabled = true },
                         mccabe = { enabled = true },  -- cyclic complexity chekcs
                         pycodestyle = { enabled = true },
-                        pyflakes = { enabled = false },
+                        pyflakes = { enabled = true },
                         mypy = { enabled = false },
                         isort = { enabled = false },
                         yapf = { enabled = false },
-                        preload = { enabled = false },
+                        preload = { enabled = true },
                         rope_completion = { enabled = false },
                     }
                 }

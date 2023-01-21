@@ -3,11 +3,11 @@ local null_ls = require("null-ls")
 require("mason-null-ls").setup({
     automatic_setup = true,
     ensure_installed = {
-        "actionlint",
+        -- "actionlint",
         "codespell",
-        "jq",
-        "misspell",
-        "stylua",
+        -- "jq",
+        -- "misspell",
+        -- "stylua",
     }
 })
 

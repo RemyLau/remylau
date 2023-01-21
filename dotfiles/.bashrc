@@ -37,6 +37,8 @@ alias nvim="~/software/nvim/nvim.appimage"
 alias tcp="cat ~/.tmux.clipboard"
 alias ta="tmux attach"
 
+alias poetry="~/.local/bin/poetry"
+
 # group access
 umask g+rw
 
@@ -44,23 +46,24 @@ umask g+rw
 #export PATH="/mnt/home/liurenmi/software/anaconda3/bin:$PATH"
 
 # Disable unnecessary multithreading by numpy
-export OPENBLAS_NUM_THREADS=1
-export MKL_NUM_THREADS=1
-export NUMEXPR_NUM_THREADS=1
-export OMP_NUM_THREADS=1
+#export OPENBLAS_NUM_THREADS=1
+#export MKL_NUM_THREADS=1
+#export NUMEXPR_NUM_THREADS=1
+#export OMP_NUM_THREADS=1
 
 # . /mnt/home/liurenmi/software/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 # conda activate  # commented out by conda initialize
 
 module use /mnt/research/compbio/krishnanlab/modules/
+module load git
 
 # CUDA 11.1.1
 #module swap GNU GCC/10.2.0
 #module load CUDA/11.1.1
 
-# CUDA 11.0.2
-module swap GNU GCC/9.3.0
-module load CUDA/11.0.2
+# CUDA 11.6
+module swap GNU GCCcore/11.3.0
+module load CUDA/11.6.0
 
 #module swap GNU GCC/8.3.0
 #module load CUDA/10
@@ -69,6 +72,8 @@ module load CUDA/11.0.2
 #module load GNU/7
 #module load OpenMPI/3
 
+# GLIBC
+# module load GCCcore/6.4.0 glibc/2.28
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

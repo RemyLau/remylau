@@ -8,7 +8,7 @@ test -f /etc/profile.dos && . /etc/profile.dos
 # add aliases if there is a .aliases file
 test -s ~/.alias && . ~/.alias
 alias rm="rm -i"
-alias qwatch="watch squeue -u liurenmi -o '%.18i\ %.25j\ %.2t\ %.10M\ %R\ %C'"
+alias qwatch="watch squeue -u liurenmi -o '%.18i\ %.9P\ %.50j\ %.8u\ %.12T\ %.10M\ %.9l\ %.6D\ %R'"
 alias nwatch="watch nvidia-smi"
 alias gwatch="watch -n 1 nvidia-smi"
 alias n2vp="python /mnt/home/liurenmi/repo/BioGrid_emd/src/node2vec/main.py"

@@ -76,6 +76,16 @@ return require("packer").startup {
         use 'jose-elias-alvarez/null-ls.nvim'           -- use nvim as lsp to inject diagnostics, etc.
         use 'jayp0521/mason-null-ls.nvim'
 
+        -- Completion
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'hrsh7th/cmp-buffer'
+        use 'hrsh7th/cmp-path'
+        use 'hrsh7th/cmp-cmdline'
+        use 'hrsh7th/nvim-cmp'
+        -- vsnip
+        use 'hrsh7th/cmp-vsnip'
+        use 'hrsh7th/vim-vsnip'
+
         -- Powertools
         use 'nvim-telescope/telescope.nvim'
         use 'ThePrimeagen/harpoon'

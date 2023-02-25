@@ -28,8 +28,8 @@ require("mason-lspconfig").setup {
     -- This setting has no relation with the `automatic_installation` setting.
     ensure_installed = {
         -- "bashls",
-        "pylsp",
-        -- "sumneko_lua",
+        -- "pylsp",
+        -- "lua_ls",
         -- "yamlls",
     },
 
@@ -85,8 +85,8 @@ require("mason-lspconfig").setup_handlers {
             on_attach = on_attach,
         }
     end,
-   ["sumneko_lua"] = function ()
-       require("lspconfig").sumneko_lua.setup {
+   ["lua_ls"] = function ()
+       require("lspconfig").lua_ls.setup {
            settings = {
                Lua = {
                    diagnostics = {

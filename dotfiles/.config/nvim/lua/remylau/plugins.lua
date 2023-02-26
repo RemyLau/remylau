@@ -95,5 +95,6 @@ return require("packer").startup {
             config = function() require 'sessions'.setup() end
         }
         use 'folke/trouble.nvim'
+        use 'github/copilot.vim'
     end
 }

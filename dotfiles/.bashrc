@@ -55,15 +55,16 @@ umask g+rw
 # conda activate  # commented out by conda initialize
 
 module use /mnt/research/compbio/krishnanlab/modules/
-module load git nodejs
 
 # CUDA 11.1.1
 #module swap GNU GCC/10.2.0
 #module load CUDA/11.1.1
 
 # CUDA 11.6
-module swap GNU GCCcore/11.3.0
+module swap GNU GCCcore/11.2.0
 module load CUDA/11.6.0
+
+module load git nodejs
 
 #module swap GNU GCC/8.3.0
 #module load CUDA/10

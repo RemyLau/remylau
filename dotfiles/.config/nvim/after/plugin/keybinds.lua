@@ -9,6 +9,12 @@ map('n', '<C-m>', ':Mason<CR>')
 map('n', '<Leader>n', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 map('n', '<Leader>p', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 
+-- Completion
+map('n', '<Leader>cd', "<cmd>lua require('cmp').setup.buffer { enabled = false }<CR>")
+map('n', '<Leader>ce', "<cmd>lua require('cmp').setup.buffer { enabled = true }<CR>")
+map('n', '<Leader>coe', "<cmd>Copilot enable<CR>")
+map('n', '<Leader>cod', "<cmd>Copilot disable<CR>")
+
 -- Undo tree
 map('n', '<Leader>ud', ':UndotreeToggle<CR>')
 

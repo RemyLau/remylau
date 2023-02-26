@@ -95,6 +95,17 @@ return require("packer").startup {
             config = function() require 'sessions'.setup() end
         }
         use 'folke/trouble.nvim'
+
+        -- AI powered
         use 'github/copilot.vim'
+        -- use {
+        --   "jackMort/ChatGPT.nvim",
+        --   config = function() require "chatgpt".setup() end,
+        --   requires = {
+        --     "MunifTanjim/nui.nvim",
+        --     "nvim-lua/plenary.nvim",
+        --     "nvim-telescope/telescope.nvim"
+        --   }
+        -- }
     end
 }

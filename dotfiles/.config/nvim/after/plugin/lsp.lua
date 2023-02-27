@@ -85,15 +85,15 @@ require("mason-lspconfig").setup_handlers {
             on_attach = on_attach,
         }
     end,
-   ["lua_ls"] = function ()
-       require("lspconfig").lua_ls.setup {
-           settings = {
-               Lua = {
-                   diagnostics = {
-                       globals = { "vim" }
-                   }
-               }
-           }
-       }
-   end
+    ["lua_ls"] = function ()
+        require("lspconfig").lua_ls.setup {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" }
+                    }
+                }
+            }
+        }
+    end
 }

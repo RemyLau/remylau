@@ -20,6 +20,7 @@ map('n', '<Leader>ud', ':UndotreeToggle<CR>')
 
 -- NERDTree
 map('n', '<Leader>e', ':NERDTree<CR>')
+map('n', '<Leader>r', ':NERDTreeFind<CR>')
 
 -- Telescope
 map('n', '<C-p>', ':Telescope find_files<CR>')

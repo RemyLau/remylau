@@ -19,13 +19,6 @@ null_ls.setup({
     },
 })
 
-require("mason-null-ls").setup_handlers {
-    -- All sources with no handler get passed here
-    function(source_name, methods)
-        -- To keep the original functionality of `automatic_setup = true`,
-        -- please add the below.
-        require("mason-null-ls.automatic_setup")(source_name, methods)
-    end,
-}
+require("mason-null-ls").setup({ automatic_setup = true })
 
 null_ls.setup()

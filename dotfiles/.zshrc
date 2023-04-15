@@ -143,9 +143,12 @@ alias dev20='ssh liurenmi@hpcc.msu.edu -t "ssh dev-amd20"'
 alias dev20v='ssh liurenmi@hpcc.msu.edu -t "ssh dev-amd20-v100"'
 alias dev20l='ssh -L 45684:localhost:45684 liurenmi@hpcc.msu.edu -t "ssh -L 45684:localhost:45684 dev-amd20"'
 alias rsub='ssh -R 52698:localhost:52698 liurenmi@hpcc.msu.edu'
+# DSE servers
 alias gr='ssh liurenmi@scully.egr.msu.edu -t "ssh liurenmi@grandriver.egr.msu.edu -t bash"'
 alias grl='ssh -L 45684:localhost:45684 liurenmi@scully.egr.msu.edu -t "ssh -L 45684:localhost:45684 liurenmi@grandriver.egr.msu.edu -t bash"'
 alias awsec='ssh -i .dse_aws_remy.pem remy@ec2-3-238-218-110.compute-1.amazonaws.com'
+alias chatdse='ssh liurenmi@scully.egr.msu.edu -t "ssh liurenmi@chatdse.egr.msu.edu -t bash"'
+alias pm='ssh liurenmi@scully.egr.msu.edu -t "ssh liurenmi@papermachine.egr.msu.edu -t bash"'
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

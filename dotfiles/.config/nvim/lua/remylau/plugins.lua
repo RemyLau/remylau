@@ -53,6 +53,7 @@ return require("packer").startup {
         use { 'pineapplegiant/spaceduck', branch = 'main' }
         use 'rebelot/kanagawa.nvim'
         use { 'rose-pine/neovim', as = 'rose-pine' }
+        use 'marko-cerovac/material.nvim'
 
         -- Editing
         use 'Vimjas/vim-python-pep8-indent'

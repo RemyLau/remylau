@@ -21,8 +21,8 @@ My broad research interests include network biology, graph representation learni
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=remylau&theme=tokyonight&show_icons=true)
 
 ###  🛠 I’m currently developing
-- [nleval](https://github.com/krishnanlab/NetworkLearningEval): a toolbox for setting up benchmarking graph datasets using biological network and annotation data from public data sources.
-- [PyDANCE](https://github.com/OmicsML/dance): an extensive toolkit for deep learning with single-cell (multi-)omics data.
+- [obnb](https://github.com/krishnanlab/obnb): a Python toolkit for setting up benchmarking datasets using publicly available biomedical networks and gene annotation resources. A comprehensive benchmarking study with various graph neural networks and graph embedding methods is presented in [obnbench](https://github.com/krishnanlab/obnbench).
+- [DANCE](https://github.com/OmicsML/dance): an extensive toolkit for deep learning with single-cell (multi-)omics data.
 
 ### 🧰 I'm actively maintaining several packages related to my past / recent projects
 - [PecanPy](https://github.com/krishnanlab/PecanPy) [[paper](https://academic.oup.com/bioinformatics/article/37/19/3377/6184859)]: a memory efficient and [Numba](https://github.com/numba/numba) accelerated Python implementation of [node2vec](https://snap.stanford.edu/node2vec/) with an improved version [node2vec+](https://github.com/krishnanlab/node2vecplus_benchmarks) [[paper](https://www.biorxiv.org/content/10.1101/2022.08.14.503926v1.abstract)] for weighted graphs. 

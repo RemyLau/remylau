@@ -101,6 +101,9 @@ return require("packer").startup {
         }
         use 'folke/trouble.nvim'
 
+        -- Git related
+        use 'APZelos/blamer.nvim'
+
         -- AI powered
         use 'github/copilot.vim'
         -- use {

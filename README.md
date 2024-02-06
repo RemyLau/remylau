@@ -46,3 +46,13 @@ My broad research interests include network biology, graph representation learni
   - [pydab](https://github.com/krishnanlab/pydab): a tool for working with [dab](https://functionlab.github.io/sleipnir-docs/Dat2Dab.html) files used by [Sleipnir](https://functionlab.github.io/sleipnir-docs/), a C++ library for machine learning on genomic data.
   - [py2zenodo](https://github.com/RemyLau/py2zenodo): a command line tool for uploading data to [Zenodo](https://zenodo.org/)
   - [fastauroc](https://github.com/RemyLau/fastauc): a [Numba](https://github.com/numba/numba) accelerated computation of the area under the receiver operating characteristic.
+
+### Installation notes
+
+```bash
+conda create -n remylau python=3.11 -y && conda activate remylau
+
+pip install -e .
+
+conda clean --all -y
+```

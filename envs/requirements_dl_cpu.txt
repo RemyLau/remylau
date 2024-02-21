@@ -1,0 +1,9 @@
+# Core
+torch
+torchvision
+torchaudio
+
+# Tools
+torch_geometric
+torchmetrics
+lightning

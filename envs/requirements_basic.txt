@@ -1,0 +1,32 @@
+# Basic
+numpy
+numba
+scipy
+pandas
+pyarrow
+
+# Sincle-cell
+scanpy
+anndata
+mudata
+
+# ML
+networkx
+scikit-learn
+gensim
+
+# Utils
+requests
+mygene
+tqdm
+
+# Plotting
+matplotlib
+seaborn
+
+# Dev related
+ipython
+ipdb
+pytest
+pre-commit
+tox

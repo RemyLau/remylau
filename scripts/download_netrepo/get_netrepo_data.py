@@ -44,7 +44,7 @@ def get_meta_df(path_to_html: str, path_to_metadata: str, reprocess_metadata: bo
 def download_data(data_dir: str, meta_df: pd.DataFrame, redownload: bool, reunpack: bool):
     data_dir = Path(data_dir)
 
-    failed = []
+    failed_download, failed_unpack = [], []
     pbar = tqdm(meta_df[["Name", "url"]].iterrows(), total=len(meta_df))
 
     for _, (name, url) in pbar:
@@ -62,7 +62,7 @@ def download_data(data_dir: str, meta_df: pd.DataFrame, redownload: bool, reunpa
                         RuntimeWarning,
                         stacklevel=2,
                     )
-                    failed.append(name)
+                    failed_download.append(name)
                     continue
 
                 pbar.set_description(f"Saving zip file to {save_path}")
@@ -75,14 +75,17 @@ def download_data(data_dir: str, meta_df: pd.DataFrame, redownload: bool, reunpa
             try:
                 with ZipFile(save_path) as zf:
                     zf.extractall(save_dir)
-            except (BadZipFile, zip.error):
+            except (BadZipFile, zlip.error):
                 warnings.warn(
                     f"Failed to extract data from {save_path}"
                 )
+                failed_unpack.append(name)
 
     print("Finished downloading Network Repository data.")
-    if failed:
-        print(f"Failed to process (total={len(failed):,}): {failed}")
+    if failed_download:
+        print(f"Failed to download (total={len(failed_download):,}): {failed_download}")
+    if failed_unpack:
+        print(f"Failed to unpack (total={len(failed_unpack):,}): {failed_unpack}")
 
 
 @click.command()

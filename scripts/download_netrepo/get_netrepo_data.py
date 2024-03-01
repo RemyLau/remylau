@@ -1,5 +1,6 @@
 import os
 import warnings
+import zlip
 from pathlib import Path
 from zipfile import BadZipFile, ZipFile
 
@@ -74,7 +75,7 @@ def download_data(data_dir: str, meta_df: pd.DataFrame, redownload: bool, reunpa
             try:
                 with ZipFile(save_path) as zf:
                     zf.extractall(save_dir)
-            except BadZipFile:
+            except (BadZipFile, zip.error):
                 warnings.warn(
                     f"Failed to extract data from {save_path}"
                 )

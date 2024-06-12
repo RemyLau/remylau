@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/renmingliu/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/renmingliu/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -150,9 +150,19 @@ alias awsec='ssh -i .dse_aws_remy.pem remy@ec2-3-238-218-110.compute-1.amazonaws
 alias chatdse='ssh liurenmi@scully.egr.msu.edu -t "ssh liurenmi@chatdse.egr.msu.edu -t bash"'
 alias pm='ssh liurenmi@scully.egr.msu.edu -t "ssh liurenmi@papermachine.egr.msu.edu -t bash"'
 
+# sshfs mount (https://github.com/macfuse/macfuse/wiki/Getting-Started)
+alias mntma="sshfs renmingl@lanec1.compbio.cs.cmu.edu:/work/magroup /Users/renmingliu/mnt -ovolname=sftp"  # Ma space on the Lane cluster at CMU
+alias unmnt="unmount -f /Users/renmingliu/mnt"
+
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
 export PATH="/Users/renmingliu/.local/bin:$PATH"
 export KMP_DUPLICATE_LIB_OK=TRUE  # OMP: Error #15: Initializing libiomp5.dylib, but found libomp.dylib already initialized
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/renmingliu/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/renmingliu/Applications/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/renmingliu/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/renmingliu/Applications/google-cloud-sdk/completion.zsh.inc'; fi

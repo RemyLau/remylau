@@ -38,6 +38,9 @@ map('n', '<Leader>7', '7gt')
 map('n', '<Leader>8', '8gt')
 map('n', '<Leader>9', '9gt')
 
+-- Terminal
+map('n', '<Leader>t', ':terminal<CR>')
+
 -- Quick fix list
 map('n', '<C-n>', ':cnext<CR>zzzv')         -- move to the next item
 map('n', '<C-a>', ':cprevious<CR>zzzv')     -- move to the previous item

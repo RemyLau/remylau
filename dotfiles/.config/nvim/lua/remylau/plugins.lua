@@ -30,13 +30,12 @@ return require("packer").startup {
         use 'nvim-lua/plenary.nvim'
 
         -- Interface
-        use 'nvim-tree/nvim-web-devicons'
         use {
             'nvim-lualine/lualine.nvim',
             -- Note: need to setup nerd-font first (https://github.com/ryanoasis/nerd-fonts)
             -- After installing nerd-font, make sure the update terminal text
             -- settings to enable it for non-ascii chars (https://stackoverflow.com/questions/72899162)
-            -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+            requires = { 'kyazdani42/nvim-web-devicons', opt = true }
         }
         use 'tpope/vim-fugitive'
 
@@ -53,12 +52,15 @@ return require("packer").startup {
         use { 'pineapplegiant/spaceduck', branch = 'main' }
         use 'rebelot/kanagawa.nvim'
         use { 'rose-pine/neovim', as = 'rose-pine' }
-        use 'marko-cerovac/material.nvim'
 
         -- Editing
         use 'Vimjas/vim-python-pep8-indent'
         use 'jiangmiao/auto-pairs'
+        use 'numToStr/Comment.nvim'
+
         use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+        use "lukas-reineke/indent-blankline.nvim"
+        use "lewis6991/gitsigns.nvim"
 
         -- Tree sitter
         use {
@@ -101,11 +103,17 @@ return require("packer").startup {
         }
         use 'folke/trouble.nvim'
 
-        -- Git related
-        use 'APZelos/blamer.nvim'
+        -- Terminal
+        use {
+            "akinsho/toggleterm.nvim",
+            tag = '*',
+            config = function()
+                require 'toggleterm'.setup()
+            end
+        }
 
         -- AI powered
-        use 'github/copilot.vim'
+        -- use 'github/copilot.vim'
         -- use {
         --   "jackMort/ChatGPT.nvim",
         --   config = function() require "chatgpt".setup() end,

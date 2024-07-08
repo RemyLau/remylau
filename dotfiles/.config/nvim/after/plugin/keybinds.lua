@@ -41,10 +41,18 @@ map('n', '<Leader>fg', '<Cmd>Telescope live_grep<CR>')
 map('n', '<Leader>fb', '<Cmd>Telescope buffers<CR>')
 map('n', '<Leader>fh', '<Cmd>Telescope help_tags<CR>')
 map('n', '<Leader>fd', '<Cmd>TodoTelescope<CR>') -- folke/todo-comments.nvim
+map('n', '<Leader>fs', '<Cmd>Telescope grep_string<CR>')
+-- map('n', '<Leader>fs', function()
+--     require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
+-- end)
+-- Telescope - Treesitter Pickers
+map('n', '<Leader>ft', '<Cmd>Telescope git_stash<CR>')
+-- Telescope - Git Pickers
 map('n', '<Leader>gg', '<Cmd>Telescope git_files<CR>')
-map('n', '<Leader>ps', function()
-    require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
-end)
+map('n', '<Leader>gc', '<Cmd>Telescope git_commits<CR>')
+map('n', '<Leader>gb', '<Cmd>Telescope git_branches<CR>')
+map('n', '<Leader>gs', '<Cmd>Telescope git_status<CR>')
+map('n', '<Leader>gh', '<Cmd>Telescope git_stash<CR>')
 
 -- Harpoon
 map('n', '<Leader>ha', '<Cmd>lua require("harpoon.mark").add_file()<CR>')

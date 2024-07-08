@@ -2,6 +2,12 @@ local function map(m, k, v)
     vim.keymap.set(m, k, v, { silent = true  })
 end
 
+local function confirm_tab_close()
+    if vim.fn.confirm("Close tab?", "&Yes\n&No", 2) == 1 then
+        vim.cmd("tabclose")
+    end
+end
+
 -- Movements
 map('n', 'n', 'nzzzv')                      -- move to next matched keeping view centered
 map('n', 'N', 'Nzzzv')
@@ -27,7 +33,7 @@ map('n', '<C-k>', ':bprevious<CR>')         -- previous buffer
 map('n', '<C-l>', ':tabnext<CR>')           -- next tab
 map('n', '<C-h>', ':tabprevious<CR>')       -- previous tab
 map('n', '<C-t>', ':tabnew<CR>')            -- new tab
-map('n', '<C-x>', ':tabclose<CR>')          -- close current tab
+map('n', '<C-x>', confirm_tab_close)        -- close current tab (with confirmation)
 map('n', '<Leader>1', '1gt')                -- go to the first tab
 map('n', '<Leader>2', '2gt')
 map('n', '<Leader>3', '3gt')

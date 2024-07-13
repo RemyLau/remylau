@@ -1,4 +1,4 @@
-require('tokyonight').setup({
+Prequire('tokyonight').setup({
     style = 'moon', -- moon, storm, night, day
     transparent = true,
     transparent_sidebar = true,
@@ -48,7 +48,7 @@ require('tokyonight').setup({
     -- end,
 })
 
-require('rose-pine').setup({
+Prequire('rose-pine').setup({
 	--- @usage 'main' | 'moon'
 	dark_variant = 'main',
 	bold_vert_split = false,
@@ -58,7 +58,7 @@ require('rose-pine').setup({
 	disable_italics = false,
 })
 
-require('kanagawa').setup({
+Prequire('kanagawa').setup({
     undercurl = true,           -- enable undercurls
     commentStyle = { },
     functionStyle = { },
@@ -75,7 +75,7 @@ require('kanagawa').setup({
     theme = "default"           -- Load "default" theme or the experimental "light" theme
 })
 
-require('material').setup({
+Prequire('material').setup({
 
     contrast = {
         terminal = false, -- Enable contrast for the built-in terminal
@@ -140,7 +140,7 @@ require('material').setup({
 })
 vim.g.material_style = "deep ocean"
 
-require("catppuccin").setup({
+Prequire("catppuccin").setup({
     flavour = "mocha", -- auto, latte, frappe, macchiato, mocha
     background = { -- :h background
         light = "latte",

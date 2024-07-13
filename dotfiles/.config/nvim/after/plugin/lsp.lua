@@ -23,7 +23,7 @@ local on_attach = function(client, bufnr)
     end, bufopts)
 end
 
-require("mason").setup({
+Prequire("mason").setup({
     -- The directory in which to install packages.
     -- install_root_dir = path.concat { vim.fn.stdpath "data", "mason" },
 
@@ -108,7 +108,7 @@ require("mason").setup({
     },
 })
 
-require("mason-lspconfig").setup {
+Prequire("mason-lspconfig").setup({
     -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "sumneko_lua" }
     -- This setting has no relation with the `automatic_installation` setting.
     ensure_installed = {
@@ -126,14 +126,14 @@ require("mason-lspconfig").setup {
     --   - { exclude: string[] }: All servers set up via lspconfig, except the ones provided in the list, are automatically installed.
     --       Example: automatic_installation = { exclude = { "rust_analyzer", "solargraph" } }
     automatic_installation = false,
-}
+})
 
-require("mason-lspconfig").setup_handlers {
+Prequire("mason-lspconfig").setup_handlers({
     -- The first entry (without a key) will be the default handler
     -- and will be called for each installed server that doesn't have
     -- a dedicated handler.
     function (server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {
+        Prequire("lspconfig")[server_name].setup {
             on_attach = on_attach,
             autostart = true,
         }
@@ -141,7 +141,7 @@ require("mason-lspconfig").setup_handlers {
 
     -- Next, you can provide a dedicated handler for specific servers.
     ["pylsp"] = function()
-        require("lspconfig").pylsp.setup {
+        Prequire("lspconfig").pylsp.setup({
             cmd = {"pylsp"},
             filetypes = {"python"},
             settings = {
@@ -168,10 +168,10 @@ require("mason-lspconfig").setup_handlers {
                 }
             },
             on_attach = on_attach,
-        }
+        })
     end,
     ["lua_ls"] = function ()
-        require("lspconfig").lua_ls.setup {
+        Prequire("lspconfig").lua_ls.setup({
             settings = {
                 Lua = {
                     diagnostics = {
@@ -179,6 +179,6 @@ require("mason-lspconfig").setup_handlers {
                     }
                 }
             }
-        }
+        })
     end
-}
+})

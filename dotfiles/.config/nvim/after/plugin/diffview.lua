@@ -1,7 +1,7 @@
 -- Lua
-local actions = require("diffview.actions")
+local actions = Prequire("diffview.actions")
 
-require("diffview").setup({
+Prequire("diffview").setup({
   diff_binaries = false,    -- Show diffs for binaries
   enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
   git_cmd = { "git" },      -- The git executable followed by default args.

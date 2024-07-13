@@ -1,4 +1,4 @@
-require('gitsigns').setup {
+Prequire('gitsigns').setup({
     signs = {
         add          = { text = '┃' },
         change       = { text = '┃' },
@@ -46,4 +46,4 @@ require('gitsigns').setup {
         row = 0,
         col = 1
     },
-}
+})

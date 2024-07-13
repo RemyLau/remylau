@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('BufWritePost', {
     command = 'source <afile> | PackerCompile',
 })
 
-return require("packer").startup {
+return require('packer').startup {
     function(use)
         -- Package Manager
         use 'wbthomason/packer.nvim'
@@ -66,14 +66,14 @@ return require("packer").startup {
         use 'numToStr/Comment.nvim'
 
         use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-        use "lukas-reineke/indent-blankline.nvim"
+        use 'lukas-reineke/indent-blankline.nvim'
 
         -- Tree sitter
         use {
             'nvim-treesitter/nvim-treesitter',
             run = ':TSUpdate'
             -- Run the line below instead of the above for first time installation
-            -- run = function() require('nvim-treesitter.install').update({ with_sync = true }) end
+            -- run = function() Prequire('nvim-treesitter.install').update({ with_sync = true }) end
         }
         use 'p00f/nvim-ts-rainbow'
         use 'nvim-treesitter/playground'
@@ -105,28 +105,28 @@ return require("packer").startup {
         use 'mbbill/undotree'
         use {
             'natecraddock/sessions.nvim',
-            config = function() require 'sessions'.setup() end
+            config = function() Prequire('sessions').setup() end
         }
         use 'folke/trouble.nvim'
 
         -- Terminal
         use {
-            "akinsho/toggleterm.nvim",
+            'akinsho/toggleterm.nvim',
             tag = '*',
             config = function()
-                require 'toggleterm'.setup()
+                Prequire('toggleterm').setup()
             end
         }
 
         -- AI powered
         -- use 'github/copilot.vim'
         -- use {
-        --   "jackMort/ChatGPT.nvim",
-        --   config = function() require "chatgpt".setup() end,
+        --   'jackMort/ChatGPT.nvim',
+        --   config = function() Prequire('chatgpt').setup() end,
         --   requires = {
-        --     "MunifTanjim/nui.nvim",
-        --     "nvim-lua/plenary.nvim",
-        --     "nvim-telescope/telescope.nvim"
+        --     'MunifTanjim/nui.nvim',
+        --     'nvim-lua/plenary.nvim',
+        --     'nvim-telescope/telescope.nvim'
         --   }
         -- }
 
@@ -136,7 +136,7 @@ return require("packer").startup {
             config = function()
                 vim.o.timeout = true
                 vim.o.timeoutlen = 1000
-                require 'which-key'.setup()
+                Prequire('which-key').setup()
             end,
         }
     end

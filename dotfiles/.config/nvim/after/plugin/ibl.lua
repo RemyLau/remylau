@@ -14,7 +14,7 @@ local char = "▏"
 -- local char = "┆"
 -- local char = "┊"
 
-require("ibl").setup {
+Prequire("ibl").setup {
     enabled = true,
     debounce = 200,
     indent = {

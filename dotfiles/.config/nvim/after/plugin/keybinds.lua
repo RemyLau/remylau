@@ -46,7 +46,11 @@ map('n', '<Leader>fs', '<Cmd>Telescope grep_string<CR>')
 --     require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })
 -- end)
 -- Telescope - Treesitter Pickers
-map('n', '<Leader>ft', '<Cmd>Telescope git_stash<CR>')
+map('n', '<Leader>ft', '<Cmd>Telescope treesitter<CR>')
+-- Telescope - LSP Pickers
+map('n', '<Leader>ld', '<Cmd>Telescope diagnostic<CR>')
+map('n', '<Leader>lr', '<Cmd>Telescope lsp_references<CR>')
+map('n', '<Leader>ls', '<Cmd>Telescope lsp_document_symbols<CR>')
 -- Telescope - Git Pickers
 map('n', '<Leader>gg', '<Cmd>Telescope git_files<CR>')
 map('n', '<Leader>gc', '<Cmd>Telescope git_commits<CR>')

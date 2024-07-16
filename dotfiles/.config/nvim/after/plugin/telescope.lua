@@ -44,7 +44,7 @@ require("telescope").setup({
         buffers = {
             mappings = {
                 i = {
-                    ["<C-d>"] = actions.delete_buffer + actions.move_to_top, -- delete buffer
+                    ["<C-d>"] = actions.delete_buffer, -- delete buffer
                 },
             },
         },

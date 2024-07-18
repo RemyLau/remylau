@@ -48,7 +48,7 @@ map('n', '<Leader>fs', '<Cmd>Telescope grep_string<CR>')
 -- Telescope - Treesitter Pickers
 map('n', '<Leader>ft', '<Cmd>Telescope treesitter<CR>')
 -- Telescope - LSP Pickers
-map('n', '<Leader>ld', '<Cmd>Telescope diagnostic<CR>')
+map('n', '<Leader>ld', '<Cmd>Telescope diagnostics<CR>')
 map('n', '<Leader>lr', '<Cmd>Telescope lsp_references<CR>')
 map('n', '<Leader>ls', '<Cmd>Telescope lsp_document_symbols<CR>')
 -- Telescope - Git Pickers

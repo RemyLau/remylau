@@ -38,6 +38,7 @@ return require('packer').startup {
             -- settings to enable it for non-ascii chars (https://stackoverflow.com/questions/72899162)
             -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
         }
+        use 'onsails/lspkind.nvim'
 
         -- Git related
         use 'APZelos/blamer.nvim'
@@ -115,11 +116,23 @@ return require('packer').startup {
             tag = '*',
             config = function()
                 Prequire('toggleterm').setup()
-            end
+            end,
         }
 
         -- AI powered
         -- use 'github/copilot.vim'
+        use {
+            "zbirenbaum/copilot.lua",
+            cmd = "Copilot",
+            event = "InsertEnter",
+            config = function() Prequire("remylau.special_config.copilot")() end,
+        }
+        -- use {
+        --     "zbirenbaum/copilot-cmp",
+        --     after = { "copilot.lua" },
+        --     config = function () Prequire("copilot_cmp").setup() end
+        -- }
+        use 'AndreM222/copilot-lualine'
         -- use {
         --   'jackMort/ChatGPT.nvim',
         --   config = function() Prequire('chatgpt').setup() end,

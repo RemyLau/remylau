@@ -24,8 +24,6 @@ map('n', '<Leader>p', '<Cmd>lua vim.diagnostic.goto_prev()<CR>')
 -- Completion
 map('n', '<Leader>cd', "<Cmd>lua require('cmp').setup.buffer { enabled = false }<CR>")
 map('n', '<Leader>ce', "<Cmd>lua require('cmp').setup.buffer { enabled = true }<CR>")
-map('n', '<Leader>coe', "<Cmd>Copilot enable<CR>")
-map('n', '<Leader>cod', "<Cmd>Copilot disable<CR>")
 
 -- Undo tree
 map('n', '<Leader>ud', '<Cmd>UndotreeToggle<CR>')
@@ -59,12 +57,13 @@ map('n', '<Leader>gs', '<Cmd>Telescope git_status<CR>')
 map('n', '<Leader>gh', '<Cmd>Telescope git_stash<CR>')
 
 -- Harpoon
-map('n', '<Leader>ha', '<Cmd>lua require("harpoon.mark").add_file()<CR>')
-map('n', '<Leader>hp', '<Cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
-map('n', '<Leader><C-j>', '<Cmd>lua require("harpoon.ui").nav_file(1)<CR>')
-map('n', '<Leader><C-k>', '<Cmd>lua require("harpoon.ui").nav_file(2)<CR>')
-map('n', '<Leader><C-l>', '<Cmd>lua require("harpoon.ui").nav_file(3)<CR>')
-map('n', '<Leader><C-;>', '<Cmd>lua require("harpoon.ui").nav_file(4)<CR>')
+map('n', '<Leader>ha', function() require("harpoon.mark").add_file() end)
+map('n', '<Leader>hp', function() require("harpoon.ui").toggle_quick_menu() end)
+mapi('n', '<Leader>h', function(i) require("harpoon.ui").nav_file(i) end)
+-- map('n', '<Leader><C-j>', '<Cmd>lua require("harpoon.ui").nav_file(1)<CR>')
+-- map('n', '<Leader><C-k>', '<Cmd>lua require("harpoon.ui").nav_file(2)<CR>')
+-- map('n', '<Leader><C-l>', '<Cmd>lua require("harpoon.ui").nav_file(3)<CR>')
+-- map('n', '<Leader><C-;>', '<Cmd>lua require("harpoon.ui").nav_file(4)<CR>')
 
 -- Sessions
 map('n', '<Leader>ss', [[
@@ -100,3 +99,8 @@ map('n', 'tv', '<Cmd>exe v:count1 . "ToggleTerm direction=vertical"<CR>')
 map('n', 'th', '<Cmd>exe v:count1 . "ToggleTerm direction=horizontal"<CR>')
 map('n', 'tb', '<Cmd>exe v:count1 . "ToggleTerm direction=tab"<CR>')
 map('n', 'ta', '<Cmd>ToggleTermToggleAll<CR>')
+
+-- Copilot
+map('n', '<Leader>coe', "<Cmd>Copilot enable<CR>")
+map('n', '<Leader>cod', "<Cmd>Copilot disable<CR>")
+map('n', '<Leader>cop', "<Cmd>Copilot panel<CR>")

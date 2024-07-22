@@ -125,7 +125,7 @@ return require('packer').startup {
             "zbirenbaum/copilot.lua",
             cmd = "Copilot",
             event = "InsertEnter",
-            config = function() Prequire("remylau.special_config.copilot")() end,
+            config = Prequire("remylau.special_config.copilot"),
         }
         -- use {
         --     "zbirenbaum/copilot-cmp",

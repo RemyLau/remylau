@@ -1,6 +1,3 @@
-local actions = require("telescope.actions")
-local layout = require("telescope.actions.layout")
-
 local mkcd = function(mode) -- mode: `cd`, `lcd`, `tcd`
     return function(prompt_bufnr)
         local selection = require("telescope.actions.state").get_selected_entry()
@@ -12,6 +9,11 @@ local mkcd = function(mode) -- mode: `cd`, `lcd`, `tcd`
     end
 end
 
+local actions = require("telescope.actions")
+local layout = require("telescope.actions.layout")
+
+local trouble = require("trouble.sources.telescope")
+
 require("telescope").setup({
     defaults = {
         mappings = {
@@ -21,9 +23,12 @@ require("telescope").setup({
                 -- Cycle previewer for git commits to show full message
                 ["<C-s>"] = actions.cycle_previewers_next,
                 ["<C-a>"] = actions.cycle_previewers_prev,
+                -- Trouble
+                ["<C-t>"] = trouble.open,
             },
             n = {
                 ["<C-.>"] = layout.toggle_preview,
+                ["<C-t>"] = trouble.open,
             },
         },
         preview = {

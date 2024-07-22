@@ -78,7 +78,10 @@ map('n', '<Leader>sl', [[
 ]]) -- load and disable autosave
 
 -- Trouble
-map('n', '<Leader>xx', '<Cmd>TroubleToggle<CR>')
+map('n', '<Leader>xx', '<Cmd>Trouble diagnostics toggle focus=false win.position=bottom win.size=20<CR>')
+map('n', '<Leader>xe', '<Cmd>Trouble diagnostics toggle focus=false win.position=bottom win.size=20 filter.severity=vim.diagnostic.severity.ERROR<CR>')
+map('n', '<Leader>xl', '<Cmd>Trouble lsp toggle focus=false win.position=right win.size=80<CR>')
+map('n', '<Leader>xs', '<Cmd>Trouble symbols toggle focus=false win.position=right win.size=120<CR>')
 
 -- Diffview
 map('n', '<Leader>do', '<Cmd>DiffviewOpen<CR>')

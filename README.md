@@ -31,11 +31,30 @@ and machine learning.
 - Stay tuned! Something exciting is going online soon!
 
 ### 🧰 I'm actively maintaining several packages related to my past / recent projects
-- [obnb](https://github.com/krishnanlab/obnb) [[paper](https://proceedings.mlr.press/v240/liu24a.html)]: a Python toolkit for setting up benchmarking datasets using publicly available biomedical networks and gene annotation resources. A comprehensive benchmarking study with various graph neural networks and graph embedding methods is presented in [obnbench](https://github.com/krishnanlab/obnbench).
-- [DANCE](https://github.com/OmicsML/dance) [[paper](https://link.springer.com/article/10.1186/s13059-024-03211-z)]: an extensive toolkit for deep learning with single-cell (multi-)omics data.
-- [PecanPy](https://github.com/krishnanlab/PecanPy) [[paper](https://academic.oup.com/bioinformatics/article/37/19/3377/6184859)]: a memory efficient and [Numba](https://github.com/numba/numba) accelerated Python implementation of [node2vec](https://snap.stanford.edu/node2vec/) with an improved version [node2vec+](https://github.com/krishnanlab/node2vecplus_benchmarks) [[paper](https://www.biorxiv.org/content/10.1101/2022.08.14.503926v1.abstract)] for weighted graphs. 
-- [PyGenePlexus](https://github.com/krishnanlab/PyGenePlexus) [[paper](https://academic.oup.com/bioinformatics/article/36/11/3457/5780279)]: a network-based gene classification service using machine learning and gene interaction network features.
-- [GTaxoGym](https://github.com/G-Taxonomy-Workgroup/GTaxoGym) [[paper](https://arxiv.org/abs/2206.07729)]: a taxonomic study of benchmarking graph datasets from various domains based on the GNN model sensitivity to a collection of graph perturbations.
+- [obnb](https://github.com/krishnanlab/obnb)
+  [[paper](https://proceedings.mlr.press/v240/liu24a.html)]:
+  a Python toolkit for setting up benchmarking datasets using publicly
+  available biomedical networks and gene annotation resources. A comprehensive
+  benchmarking study with various graph neural networks and graph embedding
+  methods is presented in [obnbench](https://github.com/krishnanlab/obnbench).
+- [DANCE](https://github.com/OmicsML/dance)
+  [[paper](https://link.springer.com/article/10.1186/s13059-024-03211-z)]:
+  an extensive toolkit for deep learning with single-cell (multi-)omics data.
+- [PecanPy](https://github.com/krishnanlab/PecanPy)
+  [[paper](https://academic.oup.com/bioinformatics/article/37/19/3377/6184859)]:
+  a memory efficient and [Numba](https://github.com/numba/numba) accelerated
+  Python implementation of [node2vec](https://snap.stanford.edu/node2vec/) with
+  an improved version [node2vec+](https://github.com/krishnanlab/node2vecplus_benchmarks)
+  [[paper](https://www.biorxiv.org/content/10.1101/2022.08.14.503926v1.abstract)]
+  for weighted graphs.
+- [PyGenePlexus](https://github.com/krishnanlab/PyGenePlexus)
+  [[paper](https://academic.oup.com/bioinformatics/article/36/11/3457/5780279)]:
+  a network-based gene classification service using machine learning and gene
+  interaction network features.
+- [GTaxoGym](https://github.com/G-Taxonomy-Workgroup/GTaxoGym)
+  [[paper](https://arxiv.org/abs/2206.07729)]: a taxonomic study of
+  benchmarking graph datasets from various domains based on the GNN model
+  sensitivity to a collection of graph perturbations.
 
 ### 📫 Find out more about my work and reach out to me
 - [ORCID](https://orcid.org/0000-0002-6025-6492)

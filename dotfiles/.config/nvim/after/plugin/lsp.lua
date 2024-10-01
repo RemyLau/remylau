@@ -140,6 +140,8 @@ Prequire("mason-lspconfig").setup_handlers({
     end,
 
     -- Next, you can provide a dedicated handler for specific servers.
+    -- NOTE: rope import issue solved by $ pip install -U python-lsp-server[all]
+    -- https://github.com/python-lsp/python-lsp-server/issues/558
     ["pylsp"] = function()
         Prequire("lspconfig").pylsp.setup({
             cmd = {"pylsp"},

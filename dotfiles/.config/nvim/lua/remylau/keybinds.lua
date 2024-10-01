@@ -25,6 +25,11 @@ map('n', '<Leader>+', ':vertical resize +5<CR>')
 map('n', '<Leader>-', ':vertical resize -5<CR>')
 map('n', '<Leader><CR>', ':source ~/.config/nvim/init.lua<CR>')
 map('i', '<C-[>', '<Esc><Esc>')             -- by pass modifier and exit quickly
+-- Copy to clipboard
+map('x', '<Leader>y', '"+y')
+map('n', '<Leader>y', '"+y')
+map('n', '<Leader>yy', '"+yy')
+map('n', '<Leader>Y', '"+yg$')
 
 -- Buffer and tabs
 map('n', '<C-j>', ':bnext<CR>')             -- next buffer

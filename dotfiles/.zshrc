@@ -42,9 +42,12 @@ zmodload zsh/complist
 compinit
 
 # SSHFS mount (https://github.com/macfuse/macfuse/wiki/Getting-Started)
-alias mntma="sshfs lane:/work/magroup /Users/renmingliu/mnt -ovolname=sftp"  # Ma space on the Lane cluster at CMU
-alias mntmas="sshfs slane:/work/magroup /Users/renmingliu/mnt -ovolname=sftp"  # Ma space, proxy jump through SCS
-alias unmnt="umount -f /Users/renmingliu/mnt"
+alias mntma="sshfs lane:/work/magroup /Users/renmingliu/mnt/magroup -ovolname=sftp"  # Ma space on the Lane cluster at CMU
+alias mntmas="sshfs slane:/work/magroup /Users/renmingliu/mnt/magroup -ovolname=sftp"  # Ma space, proxy jump through SCS
+alias mntpj="sshfs psc:/jet/home/rliu9 /Users/renmingliu/mnt/psc-jet -ovolname=sftp"
+alias mntpb="sshfs psc:/ocean/projects/bio240015p /Users/renmingliu/mnt/psc-bio -ovolname=sftp"
+alias mntpc="sshfs psc:/ocean/projects/cis240134p /Users/renmingliu/mnt/psc-cis -ovolname=sftp"
+alias unmnt="umount -f /Users/renmingliu/mnt/*"
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

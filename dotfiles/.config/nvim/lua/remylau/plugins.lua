@@ -67,7 +67,12 @@ return require('packer').startup {
         use 'numToStr/Comment.nvim'
 
         use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-        use 'lukas-reineke/indent-blankline.nvim'
+        -- use 'lukas-reineke/indent-blankline.nvim'
+        use {
+            "lukas-reineke/indent-blankline.nvim",
+            main = "ibl",
+            -- commit = "29be0919b91fb59eca9e90690d76014233392bef",
+        }
 
         -- Tree sitter
         use {
@@ -76,7 +81,8 @@ return require('packer').startup {
             -- Run the line below instead of the above for first time installation
             -- run = function() Prequire('nvim-treesitter.install').update({ with_sync = true }) end
         }
-        use 'p00f/nvim-ts-rainbow'
+        -- use 'p00f/nvim-ts-rainbow'  -- archived
+        use 'HiPhish/rainbow-delimiters.nvim'
         use 'nvim-treesitter/playground'
         use 'nvim-treesitter/nvim-treesitter-context'
 
@@ -87,8 +93,8 @@ return require('packer').startup {
             run = ':MasonUpdate',
         }
         use 'williamboman/mason-lspconfig.nvim'
-        use 'jose-elias-alvarez/null-ls.nvim'           -- use nvim as lsp to inject diagnostics, etc.
-        use 'jayp0521/mason-null-ls.nvim'
+        use 'nvimtools/none-ls.nvim'
+        use 'jay-babu/mason-null-ls.nvim'
 
         -- Completion
         use 'hrsh7th/cmp-nvim-lsp'
@@ -121,12 +127,12 @@ return require('packer').startup {
 
         -- AI powered
         -- use 'github/copilot.vim'
-        use {
-            "zbirenbaum/copilot.lua",
-            cmd = "Copilot",
-            event = "InsertEnter",
-            config = Prequire("remylau.special_config.copilot"),
-        }
+        -- use {
+        --     "zbirenbaum/copilot.lua",
+        --     cmd = "Copilot",
+        --     event = "InsertEnter",
+        --     config = Prequire("remylau.special_config.copilot"),
+        -- }
         -- use {
         --     "zbirenbaum/copilot-cmp",
         --     after = { "copilot.lua" },

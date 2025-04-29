@@ -19,7 +19,7 @@ return function()
         suggestion = {
             -- enabled = true,
             enabled = true,  -- work with copilot-cmp
-            auto_trigger = true,
+            auto_trigger = false,
             hide_during_completion = true,
             debounce = 75,
             keymap = {

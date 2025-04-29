@@ -103,6 +103,9 @@ map('n', 'th', '<Cmd>exe v:count1 . "ToggleTerm direction=horizontal"<CR>')
 map('n', 'tb', '<Cmd>exe v:count1 . "ToggleTerm direction=tab"<CR>')
 map('n', 'ta', '<Cmd>ToggleTermToggleAll<CR>')
 
+-- Context
+map('n', '[c', function() require("treesitter-context").go_to_context(vim.v.count1) end)
+
 -- Copilot
 map('n', '<Leader>coe', "<Cmd>Copilot enable<CR>")
 map('n', '<Leader>cod', "<Cmd>Copilot disable<CR>")

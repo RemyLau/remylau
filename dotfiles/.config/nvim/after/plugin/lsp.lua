@@ -128,59 +128,104 @@ Prequire("mason-lspconfig").setup({
     automatic_installation = false,
 })
 
-Prequire("mason-lspconfig").setup_handlers({
-    -- The first entry (without a key) will be the default handler
-    -- and will be called for each installed server that doesn't have
-    -- a dedicated handler.
-    function (server_name) -- default handler (optional)
-        Prequire("lspconfig")[server_name].setup {
-            on_attach = on_attach,
-            autostart = true,
-        }
-    end,
+-- -- mason-lspconfig < 2.0.0
+-- Prequire("mason-lspconfig").setup_handlers({
+--     -- The first entry (without a key) will be the default handler
+--     -- and will be called for each installed server that doesn't have
+--     -- a dedicated handler.
+--     function (server_name) -- default handler (optional)
+--         Prequire("lspconfig")[server_name].setup {
+--             on_attach = on_attach,
+--             autostart = true,
+--         }
+--     end,
+--
+--     -- Next, you can provide a dedicated handler for specific servers.
+--     -- NOTE: rope import issue solved by $ pip install -U python-lsp-server[all]
+--     -- https://github.com/python-lsp/python-lsp-server/issues/558
+--     ["pylsp"] = function()
+--         Prequire("lspconfig").pylsp.setup({
+--             cmd = {"pylsp"},
+--             filetypes = {"python"},
+--             settings = {
+--                 pylsp = {
+--                     configurationSources = {"pycodestyle"},
+--                     plugins = {
+--                         autopep8 = { enabled = true },
+--                         flake8 = { enabled = false },
+--                         jedi_completion = { enabled = true },
+--                         jedi_definition = { enabled = true },
+--                         jedi_hover = { enabled = true },
+--                         jedi_references = { enabled = true },
+--                         jedi_signature_help = { enabled = true },
+--                         jedi_symbols = { enabled = true },
+--                         mccabe = { enabled = true },  -- cyclic complexity chekcs
+--                         pycodestyle = { enabled = true },
+--                         pyflakes = { enabled = true },
+--                         mypy = { enabled = false },
+--                         isort = { enabled = false },
+--                         yapf = { enabled = false },
+--                         preload = { enabled = true },
+--                         rope_completion = { enabled = false },
+--                     }
+--                 }
+--             },
+--             on_attach = on_attach,
+--         })
+--     end,
+--     ["lua_ls"] = function ()
+--         Prequire("lspconfig").lua_ls.setup({
+--             settings = {
+--                 Lua = {
+--                     diagnostics = {
+--                         globals = { "vim" }
+--                     }
+--                 }
+--             }
+--         })
+--     end
+-- })
 
-    -- Next, you can provide a dedicated handler for specific servers.
-    -- NOTE: rope import issue solved by $ pip install -U python-lsp-server[all]
-    -- https://github.com/python-lsp/python-lsp-server/issues/558
-    ["pylsp"] = function()
-        Prequire("lspconfig").pylsp.setup({
-            cmd = {"pylsp"},
-            filetypes = {"python"},
-            settings = {
-                pylsp = {
-                    configurationSources = {"pycodestyle"},
-                    plugins = {
-                        autopep8 = { enabled = true },
-                        flake8 = { enabled = false },
-                        jedi_completion = { enabled = true },
-                        jedi_definition = { enabled = true },
-                        jedi_hover = { enabled = true },
-                        jedi_references = { enabled = true },
-                        jedi_signature_help = { enabled = true },
-                        jedi_symbols = { enabled = true },
-                        mccabe = { enabled = true },  -- cyclic complexity chekcs
-                        pycodestyle = { enabled = true },
-                        pyflakes = { enabled = true },
-                        mypy = { enabled = false },
-                        isort = { enabled = false },
-                        yapf = { enabled = false },
-                        preload = { enabled = true },
-                        rope_completion = { enabled = false },
-                    }
-                }
-            },
-            on_attach = on_attach,
-        })
-    end,
-    ["lua_ls"] = function ()
-        Prequire("lspconfig").lua_ls.setup({
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { "vim" }
-                    }
+vim.lsp.config(
+    'pylsp',
+    {
+        cmd = {"pylsp"},
+        filetypes = {"python"},
+        settings = {
+            pylsp = {
+                configurationSources = {"pycodestyle"},
+                plugins = {
+                    autopep8 = { enabled = true },
+                    flake8 = { enabled = false },
+                    jedi_completion = { enabled = true },
+                    jedi_definition = { enabled = true },
+                    jedi_hover = { enabled = true },
+                    jedi_references = { enabled = true },
+                    jedi_signature_help = { enabled = true },
+                    jedi_symbols = { enabled = true },
+                    mccabe = { enabled = true },  -- cyclic complexity chekcs
+                    pycodestyle = { enabled = true },
+                    pyflakes = { enabled = true },
+                    mypy = { enabled = false },
+                    isort = { enabled = false },
+                    yapf = { enabled = false },
+                    preload = { enabled = true },
+                    rope_completion = { enabled = false },
                 }
             }
-        })
-    end
-})
+        },
+        on_attach = on_attach,
+    }
+)
+vim.lsp.config(
+    'lua_ls',
+    {
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = { "vim" }
+                }
+            }
+        }
+    }
+)

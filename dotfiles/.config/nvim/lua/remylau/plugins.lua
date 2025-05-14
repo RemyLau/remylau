@@ -88,11 +88,21 @@ return require('packer').startup {
 
         -- LSP
         use 'neovim/nvim-lspconfig'
+
+        -- mason-lspconfig < 2.0.0
+        -- use {
+        --     'williamboman/mason.nvim',
+        --     run = ':MasonUpdate',
+        -- }
+        -- use 'williamboman/mason-lspconfig.nvim'
+
+        -- mason-lspconfig >= 2.0.0 (requires neovim >= 0.11.0)
         use {
-            'williamboman/mason.nvim',
+            'mason-org/mason.nvim',
             run = ':MasonUpdate',
         }
-        use 'williamboman/mason-lspconfig.nvim'
+        use 'mason-org/mason-lspconfig.nvim'
+
         use 'nvimtools/none-ls.nvim'
         use 'jay-babu/mason-null-ls.nvim'
 
